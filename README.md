@@ -1,3 +1,23 @@
+## 📊 GitHub Activity
+
+<p align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=sagarjhathi&show_icons=true&theme=tokyonight" height="160"/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=sagarjhathi&theme=tokyonight" height="160"/>
+
+</p>
+
+---
+
+## 🐍 Contribution Snake
+
+![snake gif](https://github.com/sagarjhathi/sagarjhathi/blob/output/github-contribution-grid-snake.svg)
+
+---
+
+
+
 <h1 align="center">Hi 👋, I'm Sagar</h1>
 
 <p align="center">
