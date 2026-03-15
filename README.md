@@ -2,9 +2,11 @@
 
 <p align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=sagarjhathi&show_icons=true&theme=tokyonight" height="160"/>
+## 📊 Contributions
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=sagarjhathi&theme=tokyonight" height="160"/>
+![Graph](https://github-readme-activity-graph.vercel.app/graph?username=sagarjhathi&theme=github)
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=sagarjhathi&show_icons=true&theme=github_dark)
 
 </p>
 
