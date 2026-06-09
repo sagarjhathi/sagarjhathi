@@ -6,7 +6,7 @@ Automation • Test Infrastructure • CI Systems
 
 <p>
   <a href="https://sagarjhathi.github.io/portfolio2.0/">🌐 Portfolio</a> •
-  <a href="RESUME_LINK">📄 Resume</a> •
+  <a href="https://sagarjhathi.github.io/portfolio2.0/Sagar_Hathi_Resume_Test__Engineer.pdf">📄 Resume</a> •
   <a href="LINKEDIN_LINK">💼 LinkedIn</a>
 </p>
 
