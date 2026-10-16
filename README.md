@@ -13,6 +13,7 @@ Each pinned project is built twice: **Selenium + Java** and **Playwright + TypeS
 </tr>
 </table>
 
+<p>
 <img src="https://img.shields.io/badge/PLAYWRIGHT-2d8a4e?style=for-the-badge" alt="Playwright" height="25">
 <img src="https://img.shields.io/badge/TYPESCRIPT-3178c6?style=for-the-badge" alt="TypeScript" height="25">
 <img src="https://img.shields.io/badge/NODE.JS-3f7a3a?style=for-the-badge" alt="Node.js" height="25">
@@ -28,3 +29,4 @@ Each pinned project is built twice: **Selenium + Java** and **Playwright + TypeS
 <img src="https://img.shields.io/badge/EXTENT-1f6f8b?style=for-the-badge" alt="Extent" height="25">
 <img src="https://img.shields.io/badge/GITHUB_ACTIONS-24292f?style=for-the-badge" alt="GitHub Actions" height="25">
 <img src="https://img.shields.io/badge/DISCORD-4752c4?style=for-the-badge" alt="Discord" height="25">
+</p>
