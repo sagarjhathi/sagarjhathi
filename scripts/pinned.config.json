@@ -3,19 +3,19 @@
   "repos": [
     {
       "name": "amazon-filter-e2e-automation",
-      "description": "Click a brand. Inspect every result. Repeat at scale. Parallel drivers, SafeActions, listener retries, POI data, layered POM, Log4j2, CI-aware config, sharded GitHub Actions, Discord alerts, live Pages report."
+      "description": "[PASTE DESCRIPTION 1]"
     },
     {
       "name": "amazon-e2e-filter-automation-play",
-      "description": "Playwright + TypeScript framework in four layers: tests, flows, pages, utils. ESLint and type-check gate, 4-shard CI, Allure + HTML reports on Pages."
+      "description": "[PASTE DESCRIPTION 2]"
     },
     {
       "name": "youtube-multi-lang-ui-validator-automation",
-      "description": "Localization bugs hide in plain sight. Switches YouTube’s language and region, then lets Lingua prove menus, filters, html lang and logo country codes match. Parallel group shards, one merged report hub."
+      "description": "[PASTE DESCRIPTION 3]"
     },
     {
       "name": "youtube-multi-language-ui-validator-automation-play",
-      "description": "Layered Playwright + TypeScript: tests, page objects, SafeActions, JSON expectations, env-overridable run config. eld language detection, 4-shard CI with merged reports, Allure trends on Pages."
+      "description": "[PASTE DESCRIPTION 4]"
     }
   ]
 }
