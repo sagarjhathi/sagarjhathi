@@ -1,7 +1,7 @@
 <table width="90%">
 <tr>
 <td width="58%" valign="middle">
-<img src="./terminal.svg" alt="Terminal: whoami — Sagar Hathi, Test Engineer" width="90%">
+<img src="./terminal.svg" alt="Terminal: whoami — Sagar Hathi, Test Engineer" width="100%">
 </td>
 <td width="42%" valign="middle">
 
