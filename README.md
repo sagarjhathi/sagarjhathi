@@ -1,13 +1,7 @@
-# Hi, I'm Sagar
+## Hi, I'm Sagar 👋
 
-Building scalable automation frameworks and reliable test systems for web and multi-platform applications — [learn more](https://sagarjhathi.github.io/portfolio2.0/).
+Test Engineer building scalable automation frameworks and reliable test systems for web and multi-platform apps.
 
-Automation • Test Infrastructure • CI Systems
+🛠 **Stack:** Java · TypeScript · Selenium · Playwright · TestNG · REST Assured · GitHub Actions
 
-<p>
-  <a href="https://sagarjhathi.github.io/portfolio2.0/">🌐 Portfolio</a> •
-  <a href="https://www.linkedin.com/in/sagar-hathi-a72054241/">💼 LinkedIn</a>
-</p>
-
-
-
+[🌐 Portfolio](https://sagarjhathi.github.io/portfolio2.0/) · [💼 LinkedIn](https://www.linkedin.com/in/sagar-hathi-a72054241/)
