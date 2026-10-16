@@ -14,12 +14,11 @@ const outDir = path.resolve(ROOT, args.includes("--out") ? args[args.indexOf("--
 const config = JSON.parse(fs.readFileSync(path.join(__dirname, "pinned.config.json"), "utf8"));
 
 // ---- layout constants (px, matching GitHub's pinned card) ----
-const CW = 410, M = 4, PAD = 16, RADIUS = 6; // CW = card width, M = transparent margin that spaces cards apart
-const W = CW + 2 * M; // two canvases + a space fit the ~846px README column
+const W = 400, PAD = 16, RADIUS = 6;
 const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif";
-const NAME_SIZE = 14, NAME_LH = 21, DESC_SIZE = 12, DESC_LH = 18, FOOT_H = 16, GAP = 8, FOOT_GAP = 14;
+const NAME_SIZE = 14, NAME_LH = 21, DESC_SIZE = 12, DESC_LH = 18, FOOT_H = 16, GAP = 8;
 const TEXT_X = PAD + 24; // name starts after 16px icon + 8px gap
-const SAFETY = 1.0; // system fonts vary; wrap a bit early rather than overflow
+const SAFETY = 1.06; // system fonts vary; wrap a bit early rather than overflow
 
 const THEMES = {
   light: { border: "#d0d7de", name: "#0969da", desc: "#656d76", meta: "#656d76", icon: "#656d76" },
@@ -46,7 +45,7 @@ const measure = (s, size, bold = false) => {
     const c = ch.charCodeAt(0);
     w += c >= 32 && c <= 126 ? WIDTHS[c - 32] : 1000; // non-ASCII: assume wide
   }
-  return (w / 1000) * size * (bold ? 1.12 : 1) * SAFETY;
+  return (w / 1000) * size * (bold ? 1.07 : 1) * SAFETY;
 };
 
 // Greedy word wrap; also breaks long tokens after hyphens (repo names), then by character.
@@ -103,14 +102,13 @@ async function languageColors() {
 }
 
 function layout(repo) {
-  const nameLines = wrap(repo.name, CW - TEXT_X - PAD, NAME_SIZE, true);
-  const descLines = repo.description ? wrap(repo.description, CW - 2 * PAD, DESC_SIZE) : [];
-  const h = PAD + nameLines.length * NAME_LH + (descLines.length ? GAP + descLines.length * DESC_LH : 0) + FOOT_GAP + FOOT_H + PAD;
+  const nameLines = wrap(repo.name, W - TEXT_X - PAD, NAME_SIZE, true);
+  const descLines = repo.description ? wrap(repo.description, W - 2 * PAD, DESC_SIZE) : [];
+  const h = PAD + nameLines.length * NAME_LH + (descLines.length ? GAP + descLines.length * DESC_LH : 0) + GAP + FOOT_H + PAD;
   return { nameLines, descLines, h };
 }
 
-function svg(repo, L, canvasH, theme) {
-  const H = canvasH - 2 * M; // card height
+function svg(repo, L, H, theme) {
   const t = THEMES[theme];
   const parts = [];
   parts.push(`<path fill="${t.icon}" transform="translate(${PAD} ${PAD + 2.5})" d="${ICON_REPO}"/>`);
@@ -134,10 +132,10 @@ function svg(repo, L, canvasH, theme) {
     parts.push(`<text x="${x + 20}" y="${fy + 12}" font-size="12" fill="${t.meta}">${label}</text>`);
     x += 20 + measure(label, 12) + 16;
   }
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${canvasH}" viewBox="0 0 ${W} ${canvasH}" role="img" aria-label="${esc(repo.name)}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(repo.name)}">
 <title>${esc(repo.name)}</title>
-<g font-family="${FONT}" transform="translate(${M} ${M})">
-<rect x="0.5" y="0.5" width="${CW - 1}" height="${H - 1}" rx="${RADIUS}" fill="none" stroke="${t.border}"/>
+<g font-family="${FONT}">
+<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="${RADIUS}" fill="none" stroke="${t.border}"/>
 ${parts.join("\n")}
 </g>
 </svg>
@@ -169,7 +167,7 @@ function readmeBlock(repos) {
     });
   }
   const layouts = repos.map(layout);
-  const H = Math.ceil(Math.max(...layouts.map((l) => l.h))) + 2 * M; // equal heights so the grid lines up
+  const H = Math.ceil(Math.max(...layouts.map((l) => l.h))); // equal heights so the grid lines up
   fs.mkdirSync(outDir, { recursive: true });
   repos.forEach((r, i) => {
     for (const theme of ["light", "dark"]) {
