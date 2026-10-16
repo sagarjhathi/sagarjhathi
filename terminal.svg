@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="150" viewBox="0 0 520 150" role="img" aria-label="Terminal: whoami — Sagar Hathi, Test Engineer">
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+    .p { fill: #7ee787; } .t { fill: #e6edf3; } .m { fill: #8b949e; }
+  </style>
+  <rect width="520" height="150" rx="8" fill="#0d1117"/>
+  <path d="M8 0h504a8 8 0 0 1 8 8v22H0V8a8 8 0 0 1 8-8z" fill="#161b22"/>
+  <circle cx="18" cy="15" r="5" fill="#ff5f56"/>
+  <circle cx="34" cy="15" r="5" fill="#ffbd2e"/>
+  <circle cx="50" cy="15" r="5" fill="#27c93f"/>
+  <text x="66" y="19" class="m" style="font-size:11px">sagar@qa: ~</text>
+  <text x="16" y="56"><tspan class="p">❯</tspan><tspan class="t"> whoami</tspan></text>
+  <text x="16" y="78" class="m">Sagar Hathi — Test Engineer</text>
+  <text x="16" y="104"><tspan class="p">❯</tspan><tspan class="t"> npx playwright test --shard=1/4</tspan></text>
+  <text x="16" y="126"><tspan class="p">✓</tspan><tspan class="m"> building frameworks that scale</tspan></text>
+  <rect x="262" y="115" width="8" height="15" fill="#e6edf3">
+    <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>
